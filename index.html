@@ -7,80 +7,119 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body {
-      padding-top: 70px;
-      background-color: #f5fbfc;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .header {
-      background: linear-gradient(135deg, #007bff, #b37400);
-      color: white;
-      padding: 60px 0;
-      text-align: center;
-    }
-    .navbar-brand {
-      font-weight: bold;
-    }
-    .nav-link {
-      color: white !important;
-      font-weight: 500;
-    }
-    section h2 {
-      margin-bottom: 30px;
-      color: #343a40;
-      border-bottom: 2px solid #007bff;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-    img.rounded-circle {
-      object-fit: cover;
-      border: 4px solid #007bff;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #e9ecef;
-      padding: 20px 0;
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #6c757d;
-    }
-    .card-highlight {
-      background-color: white;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-    }
-    .section-container {
-      padding: 50px 15px;
-    }
-    .lang-btn {
-      cursor: pointer;
-      margin-left: 10px;
-      font-weight: bold;
-      color: white;
-      background-color: transparent;
-      border: none;
-      font-size: 1rem;
-    }
-    .lang-btn.active {
-      text-decoration: underline;
-      color: #ffc107;
-    }
-  </style>
+  body {
+    padding-top: 70px;
+    background-color: #f4f8fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .header {
+    background: linear-gradient(135deg, #007bff, #b37400);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-weight: 500;
+  }
+
+  section h2 {
+    margin-bottom: 30px;
+    color: #343a40;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  img.rounded-circle {
+    object-fit: cover;
+    border: 4px solid #007bff;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  li i {
+    font-size: 1.2rem;
+    min-width: 24px;
+    text-align: center;
+    margin-right: 10px;
+    color: #007bff;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    background-color: #e9ecef;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+
+  .card-highlight {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .section-container {
+    padding: 50px 15px;
+  }
+
+  .lang-btn {
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+  }
+
+  .lang-btn.active {
+    text-decoration: underline;
+    color: #ffc107;
+  }
+
+  .img-section {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  /* Optional: Improve list readability in dark sections */
+  .card-highlight ul {
+    padding-left: 0;
+    list-style: none;
+  }
+</style>
+
 </head>
 <body>
 
@@ -99,7 +138,6 @@
         <li class="nav-item"><a class="nav-link lang-text" data-key="navProjects" href="#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link lang-text" data-key="navEducation" href="#education">Education</a></li>
         <li class="nav-item"><a class="nav-link lang-text" data-key="navContact" href="#contact">Contact</a></li>
-        <!-- Language Buttons -->
         <li class="nav-item d-flex align-items-center">
           <button class="lang-btn active" id="btn-en">EN</button>
           <button class="lang-btn" id="btn-fr">FR</button>
@@ -113,7 +151,7 @@
 <section class="header">
   <div class="container">
     <h1 class="display-4">Tshamala Pathy</h1>
-    <p class="lead lang-text" data-key="headerSubtitle">Software Engineer | Web Developer | Call Center Specialist</p>
+    <p class="lead lang-text" data-key="headerSubtitle">Software Engineer | Web Developer | Cloud Engineer</p>
   </div>
 </section>
 
@@ -121,18 +159,24 @@
 <section id="about" class="section-container container">
   <div class="row align-items-center">
     <div class="col-md-4 text-center mb-4 mb-md-0">
-      <img src="images/profile.jpg" class="img-fluid rounded-circle" width="200" height="200" alt="Profile Photo" />
+      <img src="images/profile.jpg" class="img-fluid rounded-circle" width="300" height="300" alt="Tshamala Pathy" />
     </div>
     <div class="col-md-8">
       <div class="card-highlight">
         <h2 class="lang-text" data-key="aboutTitle">About Me</h2>
         <p class="lang-text" data-key="aboutPara1">
-          I am Tshamala Pathy, a passionate software engineer dedicated to building interactive and user-friendly software. What motivates me to become a coder is my deep desire to solve real-world problems with technology and make a positive impact in the digital world.
+          I am Tshamala Pathy, a driven and resourceful Software Engineer based in South Africa, with hands-on experience in building scalable backend solutions and interactive front-end interfaces. I specialize in Python, Django, HTML, CSS, JavaScript, and SQL — tools I’ve used to develop functional and user-centric web applications.
         </p>
         <p class="lang-text" data-key="aboutPara2">
-          I started with Python, Django, and SQL, expanding my skills to advanced web and backend development. I continuously pursue learning new technologies such as AWS, Big Data, and Artificial Intelligence to create intelligent, scalable, and user-focused applications.
+          My journey into tech started with a passion for solving problems through automation and digital transformation. I’ve built systems like financial calculators, task managers, content curation platforms, and e-commerce solutions. Along the way, I have gained real-world experience with containerization (Docker), RESTful APIs, and version control using Git.
         </p>
-        <img src="https://via.placeholder.com/600x300" class="img-fluid mt-3" alt="About Image" />
+        <p class="lang-text" data-key="aboutPara3">
+          I actively pursue cloud technologies such as AWS, and I am expanding into areas like Big Data and AI — equipping myself to build intelligent, data-driven systems. I believe in continuous learning, community collaboration, and using technology to make meaningful impacts in the finance, education, and service sectors.
+        </p>
+        <p class="lang-text" data-key="aboutPara4">
+          Whether working independently or in teams, I bring creativity, precision, and adaptability to every project. I am currently seeking new opportunities and collaborations where I can contribute my skills and grow as a developer.
+        </p>
+        <img src="https://via.placeholder.com/600x300" class="img-section mt-3" alt="Working in Tech" />
       </div>
     </div>
   </div>
@@ -142,18 +186,23 @@
 <section id="skills" class="section-container container">
   <div class="card-highlight">
     <h2 class="lang-text" data-key="skillsTitle">Technical Skills</h2>
-    <ul>
-      <li class="lang-text" data-key="skill1">Python, SQL, Django, HTML, CSS, JavaScript</li>
-      <li class="lang-text" data-key="skill2">Object-Oriented Programming</li>
-      <li class="lang-text" data-key="skill3">Backend Development & RESTful APIs</li>
-      <li class="lang-text" data-key="skill4">Containerization: Docker</li>
-      <li class="lang-text" data-key="skill5">Data-driven Web Applications using Pandas, NumPy</li>
-      <li class="lang-text" data-key="skill6">Version Control: Git</li>
-      <li class="lang-text" data-key="skill7">Natural Language Processing</li>
+    <ul class="list-unstyled">
+      <li class="mb-2"><i class="fab fa-python text-primary me-2"></i>Python, Django</li>
+      <li class="mb-2"><i class="fas fa-database text-warning me-2"></i>SQL</li>
+      <li class="mb-2"><i class="fab fa-html5 text-danger me-2"></i>HTML</li>
+      <li class="mb-2"><i class="fab fa-css3-alt text-info me-2"></i>CSS</li>
+      <li class="mb-2"><i class="fab fa-js-square text-warning me-2"></i>JavaScript</li>
+      <li class="mb-2"><i class="fas fa-cogs text-success me-2"></i>Object-Oriented Programming</li>
+      <li class="mb-2"><i class="fas fa-network-wired text-secondary me-2"></i>Backend Development & RESTful APIs</li>
+      <li class="mb-2"><i class="fab fa-docker text-info me-2"></i>Docker & Containerization</li>
+      <li class="mb-2"><i class="fas fa-chart-line text-success me-2"></i>Data-Driven Apps: Pandas, NumPy</li>
+      <li class="mb-2"><i class="fab fa-git-alt text-danger me-2"></i>Version Control: Git</li>
+      <li class="mb-2"><i class="fas fa-brain text-primary me-2"></i>Natural Language Processing & AI Basics</li>
     </ul>
-    <img src="https://via.placeholder.com/600x300" class="img-fluid mt-3" alt="Skills Image" />
+    <img src="https://via.placeholder.com/600x300" class="img-section mt-3" alt="Skills Image" />
   </div>
 </section>
+
 
 <!-- Experience -->
 <section id="experience" class="section-container container">
@@ -163,7 +212,7 @@
     <a href="https://github.com/tshamala-pathy/Task_manager" target="_blank" class="lang-text" data-key="experienceLink1">View Task Manager on GitHub</a>
     <p class="mt-3 lang-text" data-key="experienceItem2">✅ Developed a bookstore management system using MySQL with search and edit features.</p>
     <a href="https://github.com/tshamala-pathy/bookstore" target="_blank" class="lang-text" data-key="experienceLink2">View Bookstore Project</a>
-    <img src="https://via.placeholder.com/600x300" class="img-fluid mt-3" alt="Experience Image" />
+    <img src="https://via.placeholder.com/600x300" class="img-section mt-3" alt="Experience Image" />
   </div>
 </section>
 
@@ -171,13 +220,59 @@
 <section id="projects" class="section-container container">
   <div class="card-highlight">
     <h2 class="lang-text" data-key="projectsTitle">Projects</h2>
-    <ul>
-      <li><a href="https://github.com/tshamala-pathy/MyApp_Project" target="_blank" class="lang-text" data-key="project1">MyApp</a></li>
-      <li><a href="https://github.com/tshamala-pathy/band_web" target="_blank" class="lang-text" data-key="project2">Band Web</a></li>
-    </ul>
-    <img src="https://via.placeholder.com/600x300" class="img-fluid mt-3" alt="Projects Image" />
+
+    <div class="row gy-4">
+      <!-- MyApp Project -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/600x300?text=MyApp" class="card-img-top" alt="MyApp Project">
+          <div class="card-body">
+            <h5 class="card-title">MyApp</h5>
+            <p class="card-text">A Django-based content curation platform offering both API and email services to deliver finance-related content for technical and non-technical users.</p>
+            <a href="https://github.com/tshamala-pathy/MyApp_Project" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Band Web Project -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/600x300?text=Band+Web" class="card-img-top" alt="Band Web Project">
+          <div class="card-body">
+            <h5 class="card-title">Band Web</h5>
+            <p class="card-text">A simple, stylish music band website using HTML, CSS, and Bootstrap to showcase performances, members, and contact details.</p>
+            <a href="https://github.com/tshamala-pathy/band_web" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Task Manager Project -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/600x300?text=Task+Manager" class="card-img-top" alt="Task Manager Project">
+          <div class="card-body">
+            <h5 class="card-title">Task Manager</h5>
+            <p class="card-text">A terminal-based Python task management tool with user authentication, report generation, and administrative features.</p>
+            <a href="https://github.com/tshamala-pathy/Task_manager" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bookstore Project -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <img src="https://via.placeholder.com/600x300?text=Bookstore" class="card-img-top" alt="Bookstore Project">
+          <div class="card-body">
+            <h5 class="card-title">Bookstore</h5>
+            <p class="card-text">A MySQL-powered book inventory system with advanced search and update capabilities, ideal for managing a small bookstore.</p>
+            <a href="https://github.com/tshamala-pathy/bookstore" target="_blank" class="btn btn-outline-primary btn-sm">View on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!-- Education -->
 <section id="education" class="section-container container">
@@ -193,100 +288,81 @@
         <p class="lang-text" data-key="educationItem2Desc">Developed essential communication and customer service skills.</p>
       </div>
     </div>
-    <img src="https://via.placeholder.com/600x300" class="img-fluid mt-3" alt="Education Image" />
+    <img src="https://via.placeholder.com/600x300" class="img-section mt-3" alt="Education Image" />
   </div>
 </section>
 
 <!-- Contact -->
 <section id="contact" class="section-container container">
   <div class="card-highlight">
-    <h2 class="lang-text" data-key="contactTitle">Contact</h2>
-    <p><strong>Email:</strong> pathypatico999@gmail.com</p>
-    <p><strong>Phone:</strong> +27 81 211 7770</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tshamala-pathy-ntambua-815b13288" target="_blank">LinkedIn Profile</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/tshamala-pathy/tshamala-pathy" target="_blank">GitHub Profile</a></p>
-    <img src="https://via.placeholder.com/600x300" class="img-fluid mt-3" alt="Contact Image" />
+    <h2 class="lang-text mb-4" data-key="contactTitle">Get in Touch</h2>
+
+    <div class="row align-items-center">
+      <!-- Contact Details -->
+      <div class="col-md-6">
+        <ul class="list-unstyled fs-5">
+          <li class="mb-3">
+            <i class="fas fa-envelope text-primary me-2"></i>
+            <strong>Email:</strong>
+            <a href="mailto:pathypatico999@gmail.com">pathypatico999@gmail.com</a>
+          </li>
+          <li class="mb-3">
+            <i class="fas fa-phone-alt text-success me-2"></i>
+            <strong>Phone:</strong>
+            <a href="tel:+27677217746">+27 677 217 746</a>
+          </li>
+          <li class="mb-3">
+            <i class="fab fa-linkedin text-info me-2"></i>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/tshamala-pathy-ntambua-815b13288" target="_blank">Tshamala Pathy</a>
+          </li>
+          <li class="mb-3">
+            <i class="fab fa-github text-dark me-2"></i>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/tshamala-pathy" target="_blank">github.com/tshamala-pathy</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Image -->
+      <div class="col-md-6 text-center">
+        <img src="https://undraw.co/api/illustrations/undraw_mobile_marketing_7x7m.svg" class="img-section mt-2" alt="Contact Illustration" />
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!-- Footer -->
 <footer>
   <p class="lang-text" data-key="footerText">© 2025 Tshamala Pathy. All rights reserved.</p>
 </footer>
 
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 <script>
   const translations = {
     en: {
-      navAbout: "About",
-      navSkills: "Skills",
-      navExperience: "Experience",
-      navProjects: "Projects",
-      navEducation: "Education",
-      navContact: "Contact",
+      navAbout: "About", navSkills: "Skills", navExperience: "Experience", navProjects: "Projects", navEducation: "Education", navContact: "Contact",
       headerSubtitle: "Software Engineer | Web Developer | Call Center Specialist",
-      aboutTitle: "About Me",
-      aboutPara1: "I am Tshamala Pathy, a passionate software engineer dedicated to building interactive and user-friendly software. What motivates me to become a coder is my deep desire to solve real-world problems with technology and make a positive impact in the digital world.",
-      aboutPara2: "I started with Python, Django, and SQL, expanding my skills to advanced web and backend development. I continuously pursue learning new technologies such as AWS, Big Data, and Artificial Intelligence to create intelligent, scalable, and user-focused applications.",
-      skillsTitle: "Technical Skills",
-      skill1: "Python, SQL, Django, HTML, CSS, JavaScript",
-      skill2: "Object-Oriented Programming",
-      skill3: "Backend Development & RESTful APIs",
-      skill4: "Containerization: Docker",
-      skill5: "Data-driven Web Applications using Pandas, NumPy",
-      skill6: "Version Control: Git",
-      skill7: "Natural Language Processing",
-      experienceTitle: "Experience",
-      experienceItem1: "✅ Designed a Python-based task management program with user authentication and reporting.",
-      experienceLink1: "View Task Manager on GitHub",
-      experienceItem2: "✅ Developed a bookstore management system using MySQL with search and edit features.",
-      experienceLink2: "View Bookstore Project",
-      projectsTitle: "Projects",
-      project1: "MyApp",
-      project2: "Band Web",
-      educationTitle: "Education",
-      educationItem1Title: "Software Engineering – HyperionDev (2023)",
-      educationItem1Desc: "Specialized in Python, backend development, and full-stack projects.",
-      educationItem2Title: "Call Center Certification – Little Step College (2019)",
-      educationItem2Desc: "Developed essential communication and customer service skills.",
-      contactTitle: "Contact",
-      footerText: "© 2025 Tshamala Pathy. All rights reserved."
+      aboutTitle: "About Me", aboutPara1: "I am Tshamala Pathy, a passionate software engineer dedicated to building interactive and user-friendly software...",
+      aboutPara2: "I started with Python, Django, and SQL, expanding my skills to advanced web and backend development...",
+      skillsTitle: "Technical Skills", skill1: "Python, SQL, Django, HTML, CSS, JavaScript", skill2: "Object-Oriented Programming", skill3: "Backend Development & RESTful APIs", skill4: "Docker & Containerization", skill5: "Data-Driven Apps: Pandas, NumPy", skill6: "Version Control: Git", skill7: "NLP & AI basics",
+      experienceTitle: "Experience", experienceItem1: "✅ Designed a Python-based task manager with authentication and reporting.", experienceLink1: "View Task Manager on GitHub", experienceItem2: "✅ Developed a bookstore management system using MySQL.", experienceLink2: "View Bookstore Project",
+      projectsTitle: "Projects", project1: "MyApp", project2: "Band Web",
+      educationTitle: "Education", educationItem1Title: "Software Engineering – HyperionDev (2023)", educationItem1Desc: "Specialized in Python, backend development, and full-stack projects.", educationItem2Title: "Call Center – Little Step College (2019)", educationItem2Desc: "Communication and customer service skills.",
+      contactTitle: "Contact", footerText: "© 2025 Tshamala Pathy. All rights reserved."
     },
     fr: {
-      navAbout: "À propos",
-      navSkills: "Compétences",
-      navExperience: "Expérience",
-      navProjects: "Projets",
-      navEducation: "Éducation",
-      navContact: "Contact",
-      headerSubtitle: "Ingénieur logiciel | Développeur Web | Spécialiste centre d'appels",
-      aboutTitle: "À propos de moi",
-      aboutPara1: "Je suis Tshamala Pathy, un ingénieur logiciel passionné par la création de logiciels interactifs et conviviaux. Ce qui me motive à devenir programmeur, c’est mon profond désir de résoudre des problèmes concrets avec la technologie et d’avoir un impact positif dans le monde numérique.",
-      aboutPara2: "J'ai commencé avec Python, Django et SQL, élargissant mes compétences au développement web avancé et back-end. Je poursuis constamment l’apprentissage de nouvelles technologies telles qu’AWS, le Big Data et l’Intelligence Artificielle pour créer des applications intelligentes, évolutives et centrées sur l’utilisateur.",
-      skillsTitle: "Compétences techniques",
-      skill1: "Python, SQL, Django, HTML, CSS, JavaScript",
-      skill2: "Programmation orientée objet",
-      skill3: "Développement back-end & API RESTful",
-      skill4: "Containerisation : Docker",
-      skill5: "Applications web basées sur les données utilisant Pandas, NumPy",
-      skill6: "Gestion de versions : Git",
-      skill7: "Traitement du langage naturel",
-      experienceTitle: "Expérience",
-      experienceItem1: "✅ Conception d'un programme de gestion de tâches en Python avec authentification utilisateur et génération de rapports.",
-      experienceLink1: "Voir Task Manager sur GitHub",
-      experienceItem2: "✅ Développement d’un système de gestion de librairie utilisant MySQL avec fonctionnalités de recherche et modification.",
-      experienceLink2: "Voir le projet Bookstore",
-      projectsTitle: "Projets",
-      project1: "MyApp",
-      project2: "Band Web",
-      educationTitle: "Éducation",
-      educationItem1Title: "Ingénierie logicielle – HyperionDev (2023)",
-      educationItem1Desc: "Spécialisé en Python, développement back-end et projets full-stack.",
-      educationItem2Title: "Certification centre d'appels – Little Step College (2019)",
-      educationItem2Desc: "Développement de compétences essentielles en communication et service client.",
-      contactTitle: "Contact",
-      footerText: "© 2025 Tshamala Pathy. Tous droits réservés."
+      navAbout: "À propos", navSkills: "Compétences", navExperience: "Expérience", navProjects: "Projets", navEducation: "Éducation", navContact: "Contact",
+      headerSubtitle: "Ingénieur logiciel | Développeur Web | Centre d'appels",
+      aboutTitle: "À propos de moi", aboutPara1: "Je suis Tshamala Pathy, ingénieur logiciel passionné par la création d'applications conviviales...",
+      aboutPara2: "J'ai commencé avec Python, Django et SQL, en élargissant mes compétences au backend...",
+      skillsTitle: "Compétences techniques", skill1: "Python, SQL, Django, HTML, CSS, JavaScript", skill2: "Programmation orientée objet", skill3: "Développement Backend & API REST", skill4: "Docker & Containerisation", skill5: "Applications avec Pandas, NumPy", skill6: "Contrôle de version : Git", skill7: "NLP & IA (bases)",
+      experienceTitle: "Expérience", experienceItem1: "✅ Conception d'un gestionnaire de tâches avec Python.", experienceLink1: "Voir sur GitHub", experienceItem2: "✅ Développement d'une librairie avec MySQL.", experienceLink2: "Voir projet Bookstore",
+      projectsTitle: "Projets", project1: "MyApp", project2: "Band Web",
+      educationTitle: "Éducation", educationItem1Title: "Ingénierie Logicielle – HyperionDev (2023)", educationItem1Desc: "Python, développement backend, full-stack.", educationItem2Title: "Centre d'appel – Little Step (2019)", educationItem2Desc: "Compétences en communication et service client.",
+      contactTitle: "Contact", footerText: "© 2025 Tshamala Pathy. Tous droits réservés."
     }
   };
 
@@ -297,19 +373,13 @@
         el.textContent = translations[lang][key];
       }
     });
-
-    // Toggle active button styles
     document.getElementById('btn-en').classList.toggle('active', lang === 'en');
     document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
   }
 
   document.getElementById('btn-en').addEventListener('click', () => setLanguage('en'));
   document.getElementById('btn-fr').addEventListener('click', () => setLanguage('fr'));
-
-  // Default language
-  document.addEventListener('DOMContentLoaded', () => {
-    setLanguage('en');
-  });
+  document.addEventListener('DOMContentLoaded', () => setLanguage('en'));
 </script>
 
 </body>
